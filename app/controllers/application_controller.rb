@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
   include ActionController::Cookies
+  
   rescue_from ActiveRecord::RecordInvalid, with: :entity_unread
 
   before_action :authorize
